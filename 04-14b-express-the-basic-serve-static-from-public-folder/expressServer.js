@@ -11,7 +11,8 @@ app.all('/',(req, res)=>{
   res.sendFile(path.join(__dirname + '/node.html'))
 });
 
-// if you as for a specific file, like http://localhost:3333/foo
+// if you specific file in your route like
+//    http://localhost:3333/foo
 // this will run
 app.all('*',(req, res)=>{
   res.send('<h1>Sorry, that file does not exit')
@@ -19,3 +20,4 @@ app.all('*',(req, res)=>{
 
 app.listen(3333)
 console.log("The server is listening on port 3333...")
+
